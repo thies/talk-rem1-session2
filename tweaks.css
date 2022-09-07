@@ -1,0 +1,130 @@
+.subtitle{
+  font-size: 0.5em;
+  text-transform: none;
+}
+
+.figure {
+  text-align: center;
+}
+
+.figure .title {
+  font-weight: bold;
+  font-size: 0.6em;
+  margin: 0;
+}
+.figure P{
+  margin: 0;
+  padding: 0;
+}
+.reveal H2{
+  line-height: 0.8;
+}
+
+H2.lineheight1_2{
+  line-height: 1.2;
+}
+H2.lineheight1_4{
+  line-height: 1.4;
+}
+
+H2.notransform {
+  text-transform: none;
+}
+
+LI {
+  font-size: 0.7em;
+  margin-bottom: 0.5em;
+}
+
+LI > UL {
+  padding-top: 0.4em;
+  padding-bottom: 0em;
+}
+
+H2 {
+  line-height: 0.7;
+}
+
+li.darkonlight {
+  list-style: none;
+}
+
+.transparent70 {
+  background-color: rgba(255,255,255,0.7);
+}
+
+.transparent80 {
+  background-color: rgba(255,255,255,0.8);
+}
+
+
+.transparent80tur {
+  background-color: rgba(64,224,208,0.8);
+}
+.transparent70tur {
+  background-color: rgba(64,224,208,0.7);
+}
+.transparent50tur {
+  background-color: rgba(64,224,208,0.5);
+}
+
+
+.transparent50 {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.source{
+  font-size: 0.5em;
+  font-weight: bold;
+}
+
+section { text-align:left; }
+
+.whitefont{
+  font-color: #ffffff;
+}
+
+.white{
+  background-color: #ffffff;
+  font-color: #000000;
+}
+.centred { text-align: center;}
+.darkonlight{background-color: #ffffff; color: #000000;}
+
+.boxwrapper {
+    border: none;
+    overflow: hidden; /* add this to contain floated children */
+}
+.box1 {
+    float:left; /* add this */
+    border: none;
+    vertical-align: text-top;
+}
+.box2 {
+    border: none;
+    float: left; /* add this */
+    vertical-align: text-top;
+}
+
+table.noborders td {
+  border: none;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;}
+
+table.noborderssmall td {
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.6em;}
+
+
+span.smalltable >* td,th {
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.5em;}
+
+mark{
+     background-color:#c0ffc8;
+    }

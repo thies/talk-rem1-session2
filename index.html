@@ -1,0 +1,1584 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>REM1—Real Estate as an Asset Class—Session 2</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="tweaks.css">
+		</head>
+		<body>
+		<div class="reveal">
+			<div class="slides">
+
+					<section data-background-image="imgs/door.jpg" >
+
+					<h2 style="line-height: 0.8em;">REM1: Session 2<span class="subtitle"><br />Risk &amp; Return</span></h2>
+
+					<p style="font-size: 0.8em; margin-top: 1.4em;">Dr. Thies Lindenthal
+						<br /><a href="mailto:htl24@cam.ac.uk">htl24@cam.ac.uk</a>
+						<br /><a href="https://twitter.com/ThiesLindenthal">https://twitter.com/ThiesLindenthal</a>
+						<br />
+						<br />
+						September 2022</p>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Risk/Return space <span class="subtitle"><br>Visualising investments on a 2D plane.</span>
+						<img src="imgs/riskreturnspace.png">
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Risk/Return space <span class="subtitle"><br>Rational investors prefer higher to lower returns, less to more risk.</span>
+						<img src="imgs/riskreturn_xyz.png" height=300>
+
+						* Z dominates both X and Y.
+						* But how to chose between X & Y?
+							- Depends on investors risk preference...
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Risk/Return trade-off <span class="subtitle"><br>Is Y's return large enough to compensate for higher risk?</span>
+						<img src="imgs/riskreturn_xy.png" height=300>
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Attitudes towards risk <span class="subtitle"><br>Indifference curves</span>
+						<img src="imgs/attitudes.png" height=400>
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Comparing investments <span class="subtitle"><br>(Investor-specific) indifference curves: X preferred over Y.</span>
+						<img src="imgs/indifference_curves_averse.png" height=400>
+
+						* X is located on more "northwestern" indifference curve.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Comparing investments <span class="subtitle"><br>(Investor-specific) indifference curves: Y preferred over X.</span>
+						<img src="imgs/indifference_curves_seeking.png" height=400>
+
+						*  X and Y have not changed... but this less risk-averse investor prefers Y of X.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Reality Check <span class="subtitle"><br>How to apply this to real-life investments?</span>
+						* Focus is on investment risk/return &mdash; nothing else
+							- Which risks are relevant and how can we quantify them?
+						*The choice is not binary
+							- Choose X? Choose Y? Or rather choose some combination of X and Y?
+						* Risk and return are in expectations
+							- Strategies for forming expectations
+							- Rely on historic relationships (ex post = ex ante?)
+							- Some form of forecast necessary &ndash; reliance on econometric model.
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Scenario Modelling <span class="subtitle"><br>A forecasting technique, good for demonstrating principles.</span>
+						* Identify k states of the world, asset returns if those states occur, and probability of each state occurring
+
+						* Expected returns: `$\small E(X) =  \sum\limits^{i=k}_{i=1}p_iX_i$`
+						* Standard deviation: `$\small \sigma_x = \sqrt{ \sum\limits^{k}_{i=1}p_i[X_i-E(X)]^2 } $`
+						* Covariance for x and y: `$\small cov_{xy} = \sum\limits^{k}_{i=1}p_i[X_i-E(X)][Y_i-E(Y)]  $`
+						* Correlation: `$\small \rho_{xy} = cov_{xy}/(\sigma_x\sigma_y) $`
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Example <span class="subtitle"><br>Company A: Three potential states. Boom / normal / slump.</span>
+						<img src="imgs/scenario1.png">
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Example <span class="subtitle"><br>Company B: Three potential states. Boom / normal / slump.</span>
+						<img src="imgs/scenario2.png">
+					</textarea>
+				</section>
+
+				<section data-markdown data-state="scatter_riskreturn_AB_">
+					<textarea data-template>
+						## Risk and return <span class="subtitle"><br>... Company A and Company B, in risk/return space.</span>
+						<img src="imgs/scatter_riskreturn_AB.png" id="scatter_riskreturn_AB-img">
+
+						<div class="chart-container" style="position: relative; height: 90%; width:500">
+							<canvas id="scatter_riskreturn_AB-chart"></canvas>
+						</div>
+					</textarea>
+				</section>
+
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Two firm portfolio <span class="subtitle"><br>50/50. Same scenarios as before.</span>
+						* In each state, the return will be the weighted average …
+							- And the portfolio expected return is, too  (10+8.5)/2 = 9.25%
+						<img src="imgs/scenario3.png">
+						* Standard deviation NOT weighted average: (10.57+2.97)/2 = 6.77 ≠ 4.5%
+					</textarea>
+				</section>
+
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Diversification of risk <span class="subtitle"><br>Achieved by imperfect correlation between returns
+</span>
+						<img src="imgs/scenario4.png">
+
+						* Any correlations less than **+1** give diversification
+						* Negative correlations give greatest benefits
+					</textarea>
+				</section>
+
+
+				<section data-markdown data-state="scatter_riskreturn_ABP">
+					<textarea data-template>
+						## Risk and return<span class="subtitle"><br>Diversification improved return per unit of risk.</span>
+						<img src="imgs/scatter_riskreturn_ABP.png" id="scatter_riskreturn_ABP-img">
+
+						<div class="chart-container" style="position: relative; height: 90%; width:500">
+							<canvas id="scatter_riskreturn_ABP-chart"></canvas>
+						</div>
+					</textarea>
+				</section>
+
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Modern portfolio theory <span class="subtitle"><br>Harry Markowitz (1952): Risk/return for portfolios of many assets.</span>
+						* The expected return in a portfolio is the weighted average of expected asset returns
+						* However,  portfolio risk depends upon
+							- Individual asset risks ($\sigma$) and the weights of the assets in portfolio ($w$)
+							- Covariances ($cov_{i,j}$): How much do returns of assets $i$ and $j$ move together?
+						* Note that:
+							- Covariances are calculated pairwise &ndash; *many* pairwise combinations as number of assets increases.
+							- $cov_{i,j} = \rho_{i,j}\sigma_i\sigma_j $. If correlation between assets $\rho_{i,j} < 1$, risk diversification will occur.
+
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Portfolio Variance <span class="subtitle"><br>Asset variance on diagonal, *many* covariance terms off-diagonal</span>
+						* `$ \sigma_p^2 = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $`
+						* `$ 	\sigma_p^2 = \begin{bmatrix}
+	w_1^2\sigma^2_1       &   w_2w_1cov_{2,1}       & \dots     &   w_nw_1cov_{n,1}       \\
+	w_1w_2cov_{1,2}       &   w_2^2\sigma^2_2      & \dots     &   w_2w_2cov_{n,2}       \\
+	\vdots  &  \vdots   &   \vdots  &   \vdots  \\
+	w_1w_ncov_{1,n}       &   w_2w_ncov_{2,n}       & \dots     &   w_n^2\sigma^2_n       \\  \end{bmatrix}$`
+
+
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Two asset portfolio <span class="subtitle"><br>From previous slide: `$\small \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $`</span>
+						* Two assets, x and y
+							- `$\small \sigma_p^2 =  w_x^2\sigma^2_x + w_y^2\sigma^2_y + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $`
+							- `$\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $`
+						* Special case of perfect correlation: `$\small \rho_{xy} = +1$`
+							- `$\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 + 2w_xw_y\sigma_x\sigma_y $`
+							- `$\small \sigma_p^2 =  (w_x\sigma_x + w_y\sigma_y)^2 $`
+							- `$\small \sigma_p =  w_x\sigma_x + w_y\sigma_y$`
+						* **This is just a weighted average.**
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Two asset portfolio <span class="subtitle"><br>From previous slide: `$\small \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $`</span>
+						* Two assets, x and y
+							- `$\small \sigma_p^2 =  w_x^2\sigma^2_x + w_y^2\sigma^2_y + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $`
+							- `$\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $`
+						* Special case of perfect negative correlation: `$\small \rho_{xy} = -1$`
+							- `$\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 - 2w_xw_y\sigma_x\sigma_y $`
+							- `$\small \sigma_p^2 =  (w_x\sigma_x - w_y\sigma_y)^2 $`
+							- `$\small \sigma_p =  w_x\sigma_x - w_y\sigma_y$`
+						* **This is definitely NOT a weighted average!**
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Total diversification? <span class="subtitle"><br>Are there weights for w<sub>x</sub>, w<sub>y</sub> that will lead to a riskless portfolio? </span>
+						* In case of perfect negative correlation
+							- `$\small \sigma_p =  w_x\sigma_x - w_y\sigma_y$`
+						* Now set
+							- `$\small w_x/w_y = \sigma_y/\sigma_x $`
+							- So that: $ \small w_x = w_y \sigma_y/\sigma_x $
+						* And plug back into equation at top of slide:
+							- `$\small \sigma_p = w_x\sigma_x - w_y\sigma_y = ( w_y \sigma_y/\sigma_x)\sigma_x - w_y\sigma_y =  w_y \sigma_y - w_y\sigma_y = 0$`
+						* With perfect negative correlation, there is a riskless portfolio &mdash; at least theoretically.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Two Assets - Risk/Return <span class="subtitle"><br>Visualising the three cases `$\rho=-1, \rho=0, \rho=1$`</span>
+						<img src="imgs/three_cases.png">
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Many assets <span class="subtitle"><br>All possible combinations of multiple assets: risk/return</span>
+						<img src="imgs/ef1.svg">
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Opportunity Set  <span class="subtitle"><br>The area that encloses all possible portfolios in risk/return space</span>
+						<img src="imgs/ef2.svg">
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Efficient frontier <span class="subtitle"><br>Rational investors will only select portfolios on the EF.</span>
+
+						<img src="imgs/ef3.svg">
+
+
+					</textarea>
+				</section>
+
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Hockey sticks! <span class="subtitle"><br>Efficient frontiers are never ever hooks!</span>
+						<img src="imgs/hockey_sticks.png">
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Investment strategies<span class="subtitle"><br>Portfolio theory meets practice</span>
+						* Professional investors have strategies that are informed by portfolio theory
+						* They will select weightings for mixed asset portfolios based on risk-return trade off
+						* Position on efficient frontier depends on risk aversion
+						* Dimensions for diversification
+							- Asset classes: equities, bonds, real estate, commodities etc.
+							- Geography: global portfolios, regional diversification
+							- Within asset class – sector and region?
+							- Economic and financial drivers of return patterns
+							- ... and many more ...
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## A practical application <span class="subtitle"><br> Yes, it is relatively easy to run a portfolio optimisation.</span>
+						* (and it can go wrong easily)
+						* An example of how not to do it on the next slides.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Measure of risk <span class="subtitle"><br>MPT depends on `$\sigma$` as a simplistic measure of risk</span>
+						* Is that a reasonable assumption for real estate?
+						<img src="imgs/HPI_UK.png" height=400>
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## (log-)normal returns?<span class="subtitle"><br>Easy to say "yes, looks well-behaved..." &mdash; and to proceed.</span>
+						<img src="imgs/returns_hist.png" height=330>
+
+						* From earlier lecture, we know that price dynamics exhibit tail-risk, mean reversion, momentum, ...
+							- (Log-)normal distribution is a gross simplification!
+							- Also, this is capital gains &mdash; total return distribution might look different!
+					</textarea>
+				</section>
+				<section data-markdown >
+					<textarea data-template>
+						## An example <span class="subtitle"><br>(What could possibly go wrong when applying MPT uncritically?)</span>
+
+						* UK market: bonds, equity, property
+							- Monthly returns, 1987&ndash;2021
+							- Property: MSCI/IPD commercial property total returns
+							- Equities: FT All Share index total returns
+							- Bonds: 10-year government gilt returns
+							- Not corrected for inflation
+						* Approach
+							- Calculate risk and return for each asset class
+							- Calculate correlations between asset classes
+							- Examine efficient frontier
+							- Consider validity of results
+
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Real data<span class="subtitle"><br>Let's use real, high-quality data </span>
+
+<span class="smalltable">
+
+| | Mean Return | Standard Dev. |
+:------------- | :----------: | -----------: |
+| Equities | 0.74% | 4.33%|
+| Property | 0.70% | 1.05% |
+| Gilts		| 0.62%| 1.93%|
+
+<br>
+<p class="centred" style="font-size: 0.6em;"><strong>Correlations</strong>
+
+| &nbsp | Equities | Property | Gilts|
+:------------- | :----------: | :----------: |-----------: |
+| Equities | 1 | |
+| Property | 0.095 | 1|
+| Gilts | 0.09 | &minus;0.169| 1|
+
+</p>
+</span>
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Asset allocation <span class="subtitle"><br>Find points on the efficient frontier</span>
+						* Return maximised for given level of risk, by adjusting allocations to three assets (numerical optimization, e.g. “Solver” plugin in Excel)
+
+						<span class="centred smalltable">
+
+						| &nbsp; | Risk | Return | % Shares | % Gilts| % Real Estate |
+						|:-------------: |:-------------: | :----------: | :----------: | :----------: | :-----------: |
+						| **min var.** | 0.85| 0.68| 1.10| 25.79| 73.11|
+						| |0.87| 0.69| 3.05| 17.80| 79.15|
+						| |0.93| 0.69| 4.99| 9.82| 85.19|
+						| |1.02| 0.70| 6.94| 1.83| 91.23|
+						| |1.25| 0.71| 19.75| 0.00| 80.25|
+						| |1.75| 0.71| 35.80| 0.00| 64.20|
+						| |2.35| 0.72| 51.85| 0.00| 48.15|
+						| |2.99| 0.73| 67.90| 0.00| 32.10|
+						| |3.66| 0.74| 83.95| 0.00| 16.05|
+						| **max ret.** |4.33| 0.74| 100.00| 0.00| 0.00|
+
+						</span>
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown data-state="ef">
+					<textarea data-template>
+						## Efficient frontier <span class="subtitle"><br>Estimates based on nominal asset returns, 1987&ndash;2021</span>
+
+						<img src="imgs/ef.png" id="ef-img">
+
+						<div class="chart-container" style="position: relative; height: 90%; width:500">
+							<canvas id="ef-chart"></canvas>
+						</div>
+					</textarea>
+				</section>
+
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Asset allocation<span class="subtitle"><br>Allocations when moving along the efficient frontier.</span>
+						* Minimum Variance Portfolio on the left, max return on right.
+						* 73% direct real estate at MVP? Really? No, that's implausible.
+
+						<img src="imgs/asset_weights.svg" height=350>
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Extreme Allocations<span class="subtitle"><br>Very high allocation to real estate deviates from actual weights.</span>
+						* Institutional Investors’ Current and Target Allocations to RE, 2012&ndash;2016<br>
+						<img src="imgs/prequin.png" height=350>
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## REITs to the rescue?<span class="subtitle"><br>Allocations with indirect RE? Monthly NAREIT UK total returns.</span>
+
+						<span class="smalltable">
+
+						| | Mean Return | Standard Dev. |
+						:------------- | :----------: | -----------: |
+						| Equities | 0.74% | 4.33%|
+						| Direct CRE | 0.70% | 1.05% |
+						| REITs		| 0.57%| 5.57%|
+						| Gilts		| 0.62%| 1.93%|
+
+
+						<br>
+						<p class="centred" style="font-size: 0.6em;"><strong>Correlations</strong>
+
+
+						| &nbsp | Equities | Direct CRE | Gilts| // | &nbsp | Equities | REITs  | Gilts |
+						:------ | :------: | :------: |:----:|:----: | :----- | :------: | :----: | :---: |
+						| **Equities** | 1 		 | 	 				| 		 | // | **Equities** | 1 | | |
+						| **Direct CRE** | 0.095 | 1				| 		 | // | **REITs** | 0.60 | 1| |
+						| **Gilts** | 0.09 | &minus;0.169| 1| // | **Gilts** | 0.09 | 0.14| 1|
+
+					</textarea>
+				</section>
+
+
+				<section data-state="ef-reits">
+						<h2> Efficient frontier <span class="subtitle"><br>Estimates based on nominal asset returns, 1987&ndash;2021</span></h2>
+
+						<img src="imgs/ef-reits.png" id="ef-reits-img">
+
+						<div class="chart-container" style="position: relative; height: 90%; width:500">
+							<canvas id="ef-reits-chart"></canvas>
+						</div>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Asset allocation<span class="subtitle"><br>Indirect real estate investments (REITs) instead of direct CRE</span>
+						* No allocations to REITs. Is that realistic? Aren't underlying assets comparable?
+
+						<img src="imgs/asset_weights_reits.svg" height=350>
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Change of frequency<span class="subtitle"><br>Same indices, different return frequency...</span>
+
+						<span class="smalltable">
+
+						| |  Ret., monthly | SD, monthly | // |  Ret., quarterly | SD, quarterly |
+						|:------------- | :----------: | :---------: |:----------: |:----------: |:----------: |
+						| Equities | 0.74% | 4.33%| // | 2.33% | 8.00% |
+						| Direct CRE | 0.70% | 1.05% | // | 2.14%|  3.01% |
+						| REITs		| 0.57%| 5.57%| // | 1.85% | 10.68% |
+						| Gilts		| 0.62%| 1.93%| // | 1.90%|  3.64% |
+
+
+						<p class="centred" style="font-size: 0.6em;"><strong>Correlations</strong></p>
+
+
+						|  | Equities | Direct CRE | Gilts| // |  | Equities | REITs  | Gilts |
+						|:------ | :------: | :------: |:----:|:----: | :----- | :------: | :----: | :---: |
+						| |  |  | | *MONTHLY* |  |  |  |  |
+						| **Equities** | 1 		 | 	 				| 		 | // | **Equities** | 1 | | |
+						| **Direct CRE** | 0.095 | 1				| 		 | // | **REITs** | 0.60 | 1| |
+						| **Gilts** | 0.09 | &minus;0.169| 1| // | **Gilts** | 0.09 | 0.14| 1|
+						| |  |  | | <br> *QUARTERLY* |  |  |  |  |
+						| **Equities** | 1 		 | 	 				| 		 | // | **Equities** | 1 | | |
+						| **Direct CRE** | 0.155 | 1				| 		 | // | **REITs** | 0.604 | 1| |
+						| **Gilts** | 0.017 | &minus;0.244| 1| // | **Gilts** | 0.017 | &minus;0.047| 1|
+						</span>
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Asset allocation<span class="subtitle"><br>Quarterly vs monthly returns: Shouldn't they be similar?</span>
+
+						* Quarterly and monthly returns based on the same indices.
+						* Different weights to direct CRE because of different reporting frequency?
+							- CRE Volatility does not scale in time (Sagi, 2020). Which frequency is the right one?
+
+						| Monthly returns | Quarterly returns |
+						|:------------- | :----------: |
+						| <img src="imgs/asset_weights.svg" height=280> | <img src="imgs/asset_weights_quarterly.svg" height=280> |
+					</textarea>
+				</section>
+
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Index trouble<span class="subtitle"><br>This seemingly straight-forward example went terribly wrong</span>
+						* Example combines return estimates from very different index estimation techniques
+							- MSCI/IPD indices are based on valuations: SMOOTHED!
+							- Equity and bond data are based on transactions
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+					## IPD/MSCI office<span class="subtitle"><br/>Valuation based indices are too smooth: SD 1.19%<br>First-order autocorrelation (FOAC): 0.86</span>
+
+					<img src="imgs/ipd_smoothed.svg" height=300>
+
+					* Can we change the underlying problem at the asset level?
+						- Not really, there are good reasons for appraisors to incorporate new information gradually.
+					* We can (and should!) alleviate the problem at the index level.
+				</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+					## De-Smoothing <span class="subtitle"><br/>Band-aid for valuation based indices.</span>
+
+					* We first model the outcome of the valuations as a moving average process.
+					* The smoothed return $r_t$ is a weighted average of previous return $r_{t-1}$ and the "true" return $r\text{*}_t$.
+						- $ r_t = \alpha r_{t-1} + (1 - \alpha)r\text{*}_t $
+						- The parameter $\alpha$ describes the weight on previous return.
+					* We can re-arrange, solve for $ r\text{*}_t $
+						- `$ r\text{*}_t =  \frac{r_t - \alpha r_{t-1}} { 1 - \alpha} $`
+					* De-smoothing is based on the assumption that returns are moving averages.
+						- Do we know it is the right abstraction? Not really, but it works...
+						- Correction takes 2 minutes in a <a href="https://docs.google.com/spreadsheets/d/1ePF63vfDc36OmGbQql2ANPOJChzqtKRrZCO7Qtjwsu8/edit?usp=sharing">spreadsheet</a>.
+				</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+					## De-Smoothed returns <span class="subtitle"><br/>Desmoothed with alpha = 0.7. More realistic?</span>
+
+					<img src="imgs/ipd_desmoothed.svg" height=350>
+
+					* Not too bad: mean unchanged, SD 2.1% &uarr;, FOAC 0.13 &darr;
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+					## Which alpha?<span class="subtitle"><br/>Which parameter value alpha is the right one?</span>
+
+
+					<table class="noborders">
+						<tr>
+							<td>
+								alpha = 0.1
+								<img src="imgs/ipd_des_0_1.svg" height=175>
+							</td>
+							<td>
+								alpha = 0.3
+								<img src="imgs/ipd_des_0_3.svg" height=175>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								alpha = 0.7
+								<img src="imgs/ipd_des_0_7.svg" height=175>
+							</td>
+							<td>
+								alpha = 0.9
+								<img src="imgs/ipd_des_0_9.svg" height=175>
+							</td>
+						</tr>
+					</table>
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+					## Justifying alpha <span class="subtitle"><br/>Standard deviation and first-order autocorrelation as a function of alpha</span>
+					<img src="imgs/foac_sd.svg" height=220>
+
+					* Which range of alpha-values leads to reasonable risk and FOAC estimates?
+						- 0.6&ndash;0.7 seems reasonable in **this example** &ndash; could differ in other cases.
+						- Should FOAC be 0? Not if the economic fundamentals exhibit autocrrelation. 0.1&ndash;0.2, for price indices. Higher for total return indices.
+					* Is the additional parameter uncertainty around alpha worth it? YES!!!
+						- Smoothed returns are most likely worse than imperfectly desmoothed returns.
+					</textarea>
+				</section>
+
+
+
+
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Re-engineering valuations?<span class="subtitle"><br>Smoothing suppresses volatility, reduces correlations.</span>
+
+						* The smoothed return $r_t$ is a weighted average of previous return $r_{t-1}$ and the "true" return $r\text{*}_t$. $\alpha$ is the weight on previous return.
+							- $ r_t = \alpha r_{t-1} + (1 - \alpha)r\text{*}_t $
+						* We can re-arrange, solve for $ r\text{*}_t $
+							- `$ r\text{*}_t =  \frac{r_t - \alpha r_{t-1}} { 1 - \alpha} $`
+						* For $\alpha$ = 0.75, SD increased from 1.05 to 2.08.
+
+						<span class="smalltable">
+						<p class="centred" style="font-size: 0.6em;"><strong>Correlations</strong></p>
+
+
+						| &nbsp | Equities | Direct CRE | Gilts| // | &nbsp | Equities | Direct CRE, desm.  | Gilts |
+						| :------ | :------: | :------: |:----:|:----: | :----- | :------: | :----: | :---: |
+						| **Equities** | 1 		 | 	 				| 		 | // | **Equities** | 1 | | |
+						| **Direct CRE** | 0.095 | 1				| 		 | // | **Direct CRE,&nbsp;des.** | <mark>0.109</mark> | 1| |
+						| **Gilts** | 0.09 | &minus;0.169| 1| // | **Gilts** | 0.09 | <mark>&minus;0.191</mark>| 1|
+						</span>
+					</textarea>
+				</section>
+
+
+				<section data-markdown data-state="ef-desmoothed">
+					<textarea data-template>
+						## EF, desmoothed CRE <span class="subtitle"><br>Desmoothed CRE returns shift MVP right.</span>
+
+						<img src="imgs/ef-desmoothed.png" id="ef-desmoothed-img">
+
+						<div class="chart-container" style="position: relative; height: 90%; width:500">
+							<canvas id="ef-desmoothed-chart"></canvas>
+						</div>
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## More realistic?<span class="subtitle"><br>Lower allocation to CRE after desmoothing. Still, way too high!</span>
+
+						* Increased SD estimate for CRE is main factor.
+						* Correlations usually play a role - but not clear in this particular example.
+
+						| MSCI/IPD smoothed returns  | desmoothed returns ($\alpha$ = 0.75) |
+						|:------------- | :----------: |
+						| <img src="imgs/asset_weights.svg" height=280> | <img src="imgs/asset_weights_desmoothed.svg" height=280> |
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## More Frictions<span class="subtitle"><br>MPT optimisation and RE: Challenges galore.</span>
+
+						* The index tracks value of standing investments. Investor's return will be lower due to transaction costs.
+							- Reduce expected return paramenter for RE?
+						* Investors cannot hold the direct real estate index.
+							- Tracking error: real estate holdings are imperfectly benchmarked by index
+							- How will that influence expected returns, SD, correlations?
+
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Corner Solutions<span class="subtitle"><br>Small changes in parameters lead to drastic shifts in allocations.</span>
+
+						* How reliable are any historic estimates? How certain are forecasts/expectations?
+						* Big re-allocations every time-period?
+
+						<p class="centred" style="font-size: 0.6em;"><strong>This 👇 is not confidence-inducing.</strong></p>
+
+
+						| MSCI/IPD desmoothed, 1987-2021   | MSCI/IPD desmoothed, 2011-2021 |
+						|:------------- | :----------: |
+						| <img src="imgs/asset_weights_desmoothed.svg" height=250> | <img src="imgs/asset_weights_desmoothed_2011-21.svg" height=250> |
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## uncertainty<span class="subtitle"><br>Break down of diversification just when you need it most?</span>
+
+						* Rolling correlation estimates: Direct RE vs FTAS (Lizieri, 2013)
+						<img src="imgs/lizieri.png" height=320>
+
+						* Diversification benefits not as big as hoped for?
+
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## uncertainty<span class="subtitle"><br>Break down of diversification just when you need it most?</span>
+
+						* Rolling correlation estimates: Direct RE vs FTAS (Lizieri, 2013)
+						<img src="imgs/lizieri.png" height=320>
+
+						* Diversification benefits not as big as hoped for?
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown data-background-image="imgs/lizieri2.png" data-background-size="contain">
+					<textarea data-template>
+						## <span class="subtitle"><br></span>
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Summing up<span class="subtitle"><br>Multi-asset portfolios can offer diversification: Markowitz!</span>
+						* MPT: Focus on returns and covariances
+						* Real estate as a diversifier: Too good to be true?
+						* MPT optimisation prone to corner solutions
+						* Index estimation methodology biases the outcome
+						* High sensitivity to time period selection
+						* Outcomes influenced by frequency of observation.
+					</textarea>
+				</section>
+
+
+				<section>
+					<h2>Know your data <span class="subtitle"><br>Don't force a square peg through a round hole.</span></h2>
+					<p class="centred"><img src="imgs/gigo.jpg" /></p>
+					<p class="source centred">Illustration: <a href="http://www.mickstevens.com">http://www.mickstevens.com</a></p>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Applied example<span class="subtitle"><br>Getting our hands dirty, again.</span>
+						* Spreadsheet with data [here](https://docs.google.com/spreadsheets/d/10l4vq6vPhSpIPtBTdf1ckWk9md_mSwDZfmfgxM2ulEI/edit?usp=sharing)
+						* Total return data for equities, bonds and MSCI/IPD and NAREIT, monthly, UK
+						* Using the services of [portfoliooptimizer.io](https://portfoliooptimizer.io/), we can calculate efficient frontiers quickly
+							- Alternatively, you could use R. Or a very slow, semi-manual Solver plugin approach in Excel.
+						* Make a copy of that spreadsheet, on Google, so you can edit.
+						* <mark>THIS SPREADSHEET IS FOR TEACHING PURPOSES ONLY.</mark>
+							- More likely than not that <mark>there are errors somewhere.</mark>
+							- <mark>Dangerous to use in assignments.</mark> The API might not be running just when you need it...
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Things worth trying<span class="subtitle"><br></span>
+						1. Make a copy on Google Spreadsheets. <mark>IT WON'T WORK IN EXCEL!</mark>
+						2. Have a look at the efficient frontiers and the graphs of the portfolio weights. Do they match your expectations? Any thoughts?
+						3. Adjust the MPT inputs (mean, SD, correlations) until the weights look more reasonable.
+							- Think, try, think again, try again,...<br>
+					</textarea>
+				</section>
+
+
+
+<section data-visibility="hidden">
+				<section data-markdown >
+					<textarea data-template>
+						## Today's Lecture<span class="subtitle"><br>Review of classical asset pricing theories <br>&ndash; which are important for (at least) 3 majorinvestment decisions:</span>
+
+						1. Equilibrium models help investors to understand what are **reasonable expected returns on investments**
+						2. Such models can help to **identify mispriced assets**
+						3. By quantifying how the market prices risk, asset pricing models can be used to adjust	portfolio returns to reﬂect the amount of risk in portfolio: **More rigorous way to evaluate performance** of investment managers
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Today's Lecture<span class="subtitle"><br>Structure</span>
+
+						1. Systematic vs. unsystematic risk
+						2. Capital Asset Pricing Model (CAPM)
+						3. Multi-factor models
+						4. Real estate risk factors
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Systematic vs. speciﬁc risk <span class="subtitle"><br> Naïve diversiﬁcation as a starting point for risk-return trade-off</span>
+
+						* We have seen that combining assets may diversify away risk (speciﬁc asset-level risk only)
+						* Suppose we have no additional information…
+							- ...then we might equally weight each asset in the portfolio, that is $w_i = \frac{1}{n}$
+						* Remember: `$ \sigma_p^2 = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} $`
+						* What are the implications for portfolio risk as the size of the portfolio increases?
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Naïve diversiﬁcation<span class="subtitle"><br>Adding many assets to portfolio</span>
+
+						* `$ \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} $`
+						* Now, consider the ﬁrst term $\sum\limits_{i=1}^{n} w_i^2\sigma^2_i$
+							- Set $w_i = \frac{1}{n}$
+							- As $n$ increases, term reduces to 1/n times the average asset variance
+						* As $n$ tends to inﬁnity, the term tends to zero
+							- `$\sum\limits_{i=1}^{n} w_i^2\sigma^2_i = \sum\limits_{i=1}^{n} \frac{1}{n} \frac{1}{n}\sigma^2_i  = \frac{1}{n} \sum\limits_{i=1}^{n} \frac{1}{n}\sigma^2_i = \frac{1}{n} \frac{ \sum\limits_{i=1}^{n}\sigma^2_i}{n} = \frac{1}{n} \bar{\sigma}^2$`
+						* So, as portfolio size increases, so impact of individual risk on portfolio risk reduces.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Naïve diversiﬁcation<span class="subtitle"><br>Adding many assets to portfolio</span>
+
+						* `$ \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} $`
+						* The second term is more complex, due to the double summation
+							- `$ \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} =  \sum\limits_{i=1}^n\sum\limits_{j<>i}^n \frac{1}{n} \frac{1}{n} cov_{ij} =  \frac{1}{n} \frac{1}{n} \sum\limits_{i=1}^n\sum\limits_{j<>i}^n cov_{ij} $`
+							- <mark>Note that there are $n(n-1)$ terms since $i≠j$, thus $ \sum\limits_{i=1}^n\sum\limits_{j<>i}^n cov_{ij} = n(n-1) \overline{cov} $</mark>
+						* We can rewrite `$\frac{1}{n} \frac{1}{n} \sum\limits_{i=1}^n\sum\limits_{j<>i}^n cov_{ij} = \frac{1}{n} \frac{1}{n} n(n-1) \overline{cov} = \frac{n-1}{n}\overline{cov}$`
+						* Thus, as $n$ increases, the second term tends to the average covariance, since
+$\frac{n-1}{n}$ tends to 1.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Convergence... <span class="subtitle"><br>... on average covariance as portfolio size increases.</span>
+
+						* Example: Average variance 25%, average covariance 12.5%.
+						<img src="imgs/naive_diversification.png" height=350>
+
+						* Here, 10-asset portfolio already diversiﬁes most of speciﬁc risk.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Reward for Risk<span class="subtitle"><br>“If it is so easy to get rid of speciﬁc risk, then...”</span>
+
+						* In efficient markets, investors will behave rationally and diversify away speciﬁc risk
+							- Thus, there is no reason why an investor should be rewarded for speciﬁc risk.
+						* Systematic risk cannot be diversiﬁed away
+							- Exposure to systematic risk should bring reward.
+						* Key insight: Return is a reward for SYSTEMATIC risk only.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Risk of direct real estate<span class="subtitle"><br>Idiosycratic risk in real estate is substantial (Eichholtz et al., 2021)</span>
+
+						<img src="imgs/rfs_idiosyncraticrisk.png" height=300>
+
+						* Naïve diversiﬁcation not feasible for households. Possible but expensive for institutional investors.
+						* Without the diversification arbitrage argument, can we still conclude that idiosycratic risk remains unrewarded?
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Capital Asset Pricing Model<span class="subtitle"><br>Principles</span>
+
+						* Investors start with choice of risky assets and construct the Markowitz eﬃcient frontier (previous Lecture)
+						* In addition, a risk free asset is added to the universe of investable assets.
+						* Investor portfolios are a mix of
+							- The risk free asset.
+							- Risky asset(s)
+						* Borrowing at the risk free rate extends set of combinations
+						* Under these assumptions, the eﬃcient frontier becomes a straight line.
+						* The new eﬃcient frontier intersects with the risky set at the Market Portfolio.
+
+					</textarea>
+				</section>
+				<section data-markdown >
+					<textarea data-template>
+						## Add risk free asset<span class="subtitle"><br>Efficient frontier from risky assets + Risk free asset.</span>
+
+						<img src="imgs/capm1.png" height=400>
+
+						* Investors can borrow and lend at *R<sub>f<sub>*.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Add risk free asset<span class="subtitle"><br>*R<sub>f<sub>* accounts for time value of money. No risk ($\sigma$).</span>
+
+						<img src="imgs/capm2.png" height=400>
+
+						* Risk premium = * E(r) &minus; R<sub>f<sub>*.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Sharpe ratio<span class="subtitle"><br>Evaluating the risk/return trade-off.</span>
+
+						<img src="imgs/capm3.png" height=400>
+
+						* How much risk premium can one expect: `$\frac{E(r) - R_f}{\sigma}$`
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Optimise Sharpe Ratios<span class="subtitle"><br>Evaluating the risk/return trade-off.</span>
+
+						<img src="imgs/capm4.png" height=400>
+
+						* Which point on eﬃcient frontier gives the highest return per unit of risk?
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## The Capital Market Line (CML)<span class="subtitle"><br>Combining the risk free asset and the market portfolio (M).</span>
+
+						<img src="imgs/capm5.png" height=400>
+
+						* Which point on efficient frontier gives the highest return per unit of risk?
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## CML dominates <span class="subtitle"><br>Risk-averse investors are better off.</span>
+
+						<img src="imgs/capm6.png" height=400>
+
+						* Hold a mixed portfolio of the risk free asset and M.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## CML dominates <span class="subtitle"><br>Less risk-averse investors are better off.</span>
+
+						<img src="imgs/capm7.png" height=400>
+
+						* Borrow at *R<sub>f</sub>* and buy more *M*.
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Expected return <span class="subtitle"><br>All portfolios will be on CML</span>
+
+						<img src="imgs/capm8.png" height=350>
+
+						* So, we can express return as a function of risk ($\sigma_p$): `$\small E(R_p) = R_f + \frac{R_m-R_f}{\sigma_M} \sigma_p$`
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Derive CAPM <span class="subtitle"><br>Capital Asset Pricing Model</span>
+
+						* This is one version (but not the famous one!) of the CAPM: `$\small E(R_p) = R_f + \frac{R_m-R_f}{\sigma_M} \sigma_p$`
+
+						* Two assets in any portfolio on CML: *R<sub>f</sub>* and *M*.
+						 	- covariance of any asset with *R<sub>f</sub>* is 0.
+							- The only covariance that matters is covariance with market: cov(R<sub>i</sub>, R<sub>M</sub>)
+						* Problem with covariance as measure of risk: Scaled by variance of market.
+							- remove variance of market from risk measure: Divide by *var<sub>M</sub>* and call the ratio `$\beta = \frac{cov(R_i, R_M)}{\sigma_M^2}$`
+
+
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Security Market Line (SML)<span class="subtitle"><br>Derived from CML, focus on systematic risk ($\beta$), not total risk ($\sigma$).</span>
+
+						* `$\beta = \frac{cov(R_i, R_M)}{\sigma_M^2}$`
+							- for $R_f$, beta is 0 (cov = 0 with risk-free asset!)
+							- for $R_M$, $cov(R_M, R_M) = \sigma_M^2$, thus beta simplifies to 1.
+						* Redraw previous plot with beta as the measure of (systematic) risk:
+
+						<img src="imgs/sml.png" height=200>
+
+						* `$\small E(R) = R_f + \frac{R_m-R_f}{1}\beta$`, which simplifies to  <mark>`$ \small E(R) = R_f + \beta (R_m-R_f)$`</mark>
+					</textarea>
+				</section>
+
+
+				<section data-markdown >
+					<textarea data-template>
+						## Beta/Risk<span class="subtitle"><br>(continued)</span>
+
+						* Beta measures the sensitivity of each asset to the market (systematic) risk factor.
+						* Assets with $\beta > 1$ carry more systematic risk than market
+							- Investors will demand higher returns to compensate
+						* Asset risk has two components: `$ \small \sigma_i^2 = \beta_i^2 \sigma_m^2 + \sigma_e^2$`
+						* The second, residual, component is not rewarded.
+					</textarea>
+				</section>
+				<section data-markdown >
+					<textarea data-template>
+						## Example<span class="subtitle"><br>Magnitude of unrewarded risk in single asset (basic calculation of required return)</span>
+
+						* Assume that the MRP is 5%, the risk free rate is 4.5% and a ﬁrm’s beta is 1.4 &ndash; what is the expected return of that ﬁrm according to CAPM?
+							- `$E(R_i) = R_f + \beta_i MRP$`
+							- `$E(R_i) = 4.5 + 1.4 (5) = 4.5 + 7.0 = 11.5%$`
+						* Assume the ﬁrm’s returns have a standard deviation of 26% and the market standard deviation is 16%. How much unrewarded residual risk is there?
+							- `$\sigma_i^2 = \beta_i^2\sigma_m^2 + \sigma_e^2$`,  for unrewarded residual risk rearrange to  $\sigma_e^2 = \sigma_i^2 - \beta_i^2 \sigma_m^2$
+							- $26^2 - 1.4^2 16^2 = 676 - 501.76 = 174.24$ <br>(174.24 / 676 = 0.258 or a quarter of the risk)
+					</textarea>
+				</section>
+				<section data-markdown >
+					<textarea data-template>
+						## Risk-adjusted performance<span class="subtitle"><br>Measures that put risk and return into perspective:</span>
+
+						<span class="smalltable">
+
+						|  |  |  |
+						|:---| :---: |:---|
+						|**Sharpe Measure** <br> $\small Sharpe = \frac{\overline{X}-R_f}{\sigma}$ <br><br> | | - Divides excess return by total risk.<br>- Meaningful measure for well diversiﬁed portfolios.|
+						|**Treynor Measure** <br> $ \small Treynor = \frac{\overline{X}-R_f}{\beta}$ <br><br>| | - Divides excess return by systematic risk.<br>- Does not assume full diversiﬁcation. |
+						|**Jensen’s Alpha** <br> $\small \alpha = \overline{X} - [R_f + \beta \times MRP] $| |- What is expected return?<br>- Is actual return higher?|
+
+						</div>
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## Traynor ratio / Jensen's $\alpha$<span class="subtitle"><br>Excess return over systematic risk measured by beta.</span>
+
+						<img src="imgs/treynor.png" height=400>
+					</textarea>
+				</section>
+
+				<section data-markdown >
+					<textarea data-template>
+						## CAPM<span class="subtitle"><br>Discussion of assumptions</span>
+
+						* CAPM has exacting theoretical assumptions:
+							- Investors seek to maximise utility of final wealth
+							- Investors’ decisions are based on risk and return
+							- Investors have homogeneous expectations of risk & return
+							- Investors have identical time horizons
+							- Information is freely & simultaneously available to all
+							- There is a risk free asset; investors may borrow and lend unlimited amounts of that asset
+							- No taxes, transaction costs or market imperfections
+							- All assets are marketable and divisible.
+						* How likely is it that these assumptions apply? In general and in real estate in particular?
+						* How robust is CAPM to their violation?
+					</textarea>
+				</section>
+
+</section>
+
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
+		<script src="reimg.js"></script>
+
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1244,
+				height: 700,
+				margin: 0.1,
+				transition: "none",
+				math: {
+					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					// pass other options into `MathJax.Hub.Config()`
+					TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+
+			function sleep(ms) {
+			  return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
+			var updateCharts = false;
+
+			if(!updateCharts){
+				//document.getElementsByClassName('chart-container').style.visibility='hidden';
+			}
+
+			async function replaceCanvasImg( x ) {
+					if( updateCharts ){
+						await sleep(1500);
+						var canv = document.getElementById( x+"-chart" );
+						var img = ReImg.fromCanvas( canv ).toImg();
+						document.getElementById( x+"-img" ).replaceWith(img);
+						console.log("replaced: "+x);
+						canv.parentNode.removeChild( canv );
+					} else {
+						var canv = document.getElementById( x+"-chart" );
+						canv.parentNode.removeChild( canv );
+					}
+		};
+
+
+			// charts etc.
+			Reveal.addEventListener( 'scatter_riskreturn_AB', function() {
+				var chart_config = {
+					type: 'scatter',
+					data: {
+						datasets: [{
+							radius: 10,
+							labels: ['Company A','Company B'],
+							backgroundColor: 'red',
+							data: [{
+								label: 'Company B',
+								x: 2.97,
+								y: 8.5
+							}, {
+								label: 'Company A',
+								x: 10.51,
+								y: 10
+							}
+						],
+						}]
+					},
+					plugins: [ChartDataLabels],
+					options: {
+						plugins: {
+							legend: {
+												display: false,
+							},
+							datalabels: {
+	                    formatter: ( val ) => {
+	                        return val.label
+	                    },
+											display: true,
+											font: {weight: 'bold', size: '15em'},
+											color: 'black',
+											align: 'top',
+											offset: 20
+	                 }
+						},
+						scales: {
+							x: {
+								title: {
+									font: {weight: 'bold', size: '20em'},
+									text: 'Risk',
+									display: 'true'
+								},
+								min: 2,
+								max: 12
+							},
+							y: {
+								title: {
+									font: {weight: 'bold', size: '20em'},
+									text: 'Return',
+									display: 'true',
+								},
+								min: 8,
+								max: 10.5
+							}
+						}
+					}
+				};
+				new Chart(document.getElementById("scatter_riskreturn_AB-chart"), chart_config );
+				replaceCanvasImg("scatter_riskreturn_AB");
+			} );
+
+
+Reveal.addEventListener( 'scatter_riskreturn_ABP', function() {
+		new Chart(document.getElementById("scatter_riskreturn_ABP-chart"), {
+			type: 'scatter',
+			data: {
+				datasets: [{
+					radius: 10,
+					showLine: true,
+					borderColor: 'black',
+					labels: ['Company A','Company B'],
+					//datalabels : dataLablesOnGraphConfig,
+					backgroundColor: 'red',
+					data: [{
+						label: "Company B",
+						x: 2.97,
+						y: 8.5
+					}, {
+						label: "Company A",
+						x: 10.51,
+						y: 10
+					}] },{
+						radius: 10,
+						backgroundColor: 'blue',
+						data:
+						[{
+						label: "Portfolio: A and B",
+						x: 4.5,
+						y: 9.25
+					}]
+				}
+				],
+			},
+			plugins: [ChartDataLabels],
+			options: {
+				plugins: {
+					datalabels: {
+									formatter: ( val ) => {
+											return val.label
+									},
+									font: {weight: "bold", size: '15em'},
+									color: "black",
+									align: "top",
+									offset: 20
+							 },
+					legend: {
+							display: false,
+						}
+				},
+				scales: {
+					x: {
+						title: {
+							font: {weight: 'bold', size: '20em'},
+							text: "Risk",
+							display: "true"
+						},
+						min: 2,
+						max: 12
+					},
+					y: {
+						title: {
+							font: {weight: 'bold', size: '20em'},
+							text: "Return",
+							display: "true",
+						},
+						min: 8,
+						max: 10.5
+					}
+				}
+			}
+		} );
+		replaceCanvasImg("scatter_riskreturn_ABP");
+	} );
+
+
+
+	Reveal.addEventListener( 'ef', function() {
+
+	new Chart(document.getElementById("ef-chart"), {
+		type: 'scatter',
+		data: {
+			datasets: [{
+				radius: 6,
+				showLine: false,
+				labels: ['Company A','Company B'],
+				//datalabels : dataLablesOnGraphConfig,
+				backgroundColor: 'red',
+				data: [{
+					label: "Stocks",
+					x: 4.33,
+					y: 0.742224
+				}, {
+					label: "Bonds",
+					x: 1.93,
+					y: 0.62
+				},{
+					label: "Real Estate (direct)",
+					x: 1.046,
+					y: 0.698
+				}] },
+				{
+					radius: 1,
+					backgroundColor: 'blue',
+					showLine: true,
+					borderColor: 'blue',
+					data:
+					[ {x: 0.846701, y: 0.679164, label: ''},
+					{x: 0.868134, y: 0.686171, label: ''},
+					{x: 0.929471, y: 0.693177, label: ''},
+					{x: 1.023564, y: 0.700184, label: ''},
+					{x: 1.254408, y: 0.707190, label: ''},
+					{x: 1.747477, y: 0.714197, label: ''},
+					{x: 2.347742, y: 0.721204, label: ''},
+					{x: 2.991352, y: 0.728210, label: ''},
+					{x: 3.655483, y: 0.735217, label: ''},
+					{x: 4.330705, y: 0.742224, label: ''}
+					]
+				}
+			]},
+		plugins: [ChartDataLabels],
+		options: {
+			plugins: {
+				datalabels: {
+								formatter: ( val ) => {
+										return val.label
+								},
+								font: {weight: "bold", size: '15em'},
+								color: "black",
+								align: "top",
+								offset: 20
+						 },
+				legend: {
+						display: false,
+					}
+			},
+			scales: {
+				x: {
+					title: {
+						font: {weight: 'bold', size: '20em'},
+						text: "Risk (%, monthly)",
+						display: "true"
+					},
+					min: 0,
+					max: 4.5
+				},
+				y: {
+					title: {
+						font: {weight: 'bold', size: '20em'},
+						text: "Return (%, monthly)",
+						display: "true",
+					},
+					min: 0.6,
+					max: 0.78
+				}
+			}
+		}
+	} );
+	replaceCanvasImg("ef");
+} );
+
+
+// chart that plots efficient frontiers for the base portfolio
+// and an alternative based on stocks, bonds and REITs
+Reveal.addEventListener( 'ef-reits', function() {
+	new Chart(document.getElementById("ef-reits-chart"), {
+		type: 'scatter',
+		data: {
+			datasets: [{
+				radius: 6,
+				showLine: false,
+				labels: ['Company A','Company B'],
+				//datalabels : dataLablesOnGraphConfig,
+				backgroundColor: 'red',
+				data: [{
+					label: "Stocks",
+					x: 4.33,
+					y: 0.742224
+				}, {
+					label: "Bonds",
+					x: 1.93,
+					y: 0.62
+				},{
+					label: "Real Estate (direct)",
+					x: 1.046,
+					y: 0.698
+				},{
+					label: "REITs",
+					x: 5.574,
+					y: 0.574
+				}] },
+				{
+					radius: 1,
+					backgroundColor: 'blue',
+					showLine: true,
+					borderColor: 'blue',
+					data:
+					[ {x: 0.846701, y: 0.679164, label: ''},
+					{x: 0.868134, y: 0.686171, label: ''},
+					{x: 0.929471, y: 0.693177, label: ''},
+					{x: 1.023564, y: 0.700184, label: ''},
+					{x: 1.254408, y: 0.707190, label: ''},
+					{x: 1.747477, y: 0.714197, label: ''},
+					{x: 2.347742, y: 0.721204, label: ''},
+					{x: 2.991352, y: 0.728210, label: ''},
+					{x: 3.655483, y: 0.735217, label: ''},
+					{x: 4.330705, y: 0.742224, label: ''}
+					]
+				},
+				{
+					radius: 1,
+					backgroundColor: 'orange',
+					showLine: true,
+					borderColor: 'orange',
+					data:
+					[ {x: 1.815829846, y: 0.638524230, label: ''},
+					{x: 1.867638792, y: 0.650046373, label: ''},
+					{x: 2.015089216, y: 0.661568516, label: ''},
+					{x: 2.239367700, y: 0.673090659, label: ''},
+					{x: 2.520044465, y: 0.684612801, label: ''},
+					{x: 2.840449572, y: 0.696134944, label: ''},
+					{x: 3.188629282, y: 0.707657087, label: ''},
+					{x: 3.556435418, y: 0.719179230, label: ''},
+					{x: 3.938373056, y: 0.730701373, label: ''},
+					{x: 4.330704911, y: 0.742223516, label: ''}
+					]
+				}
+
+			]},
+		plugins: [ChartDataLabels],
+		options: {
+			plugins: {
+				datalabels: {
+								formatter: ( val ) => {
+										return val.label
+								},
+								font: {weight: "bold", size: '15em'},
+								color: "black",
+								align: "top",
+								offset: 20
+						 },
+				legend: {
+						display: false,
+					}
+			},
+			scales: {
+				x: {
+					title: {
+						font: {weight: 'bold', size: '20em'},
+						text: "Risk (%, monthly)",
+						display: "true"
+					},
+					min: 0,
+					max: 6
+				},
+				y: {
+					title: {
+						font: {weight: 'bold', size: '20em'},
+						text: "Return (%, monthly)",
+						display: "true",
+					},
+					min: 0.5,
+					max: 0.78
+				}
+			}
+		}
+	} );
+	replaceCanvasImg("ef-reits");
+} );
+
+
+
+
+// chart that plots efficient frontiers for the base portfolio
+// and an alternative based on stocks, bonds and REITs
+Reveal.addEventListener( 'ef-desmoothed', function() {
+	new Chart(document.getElementById("ef-desmoothed-chart"), {
+		type: 'scatter',
+		data: {
+			datasets: [{
+				radius: 6,
+				showLine: false,
+				labels: ['Company A','Company B'],
+				//datalabels : dataLablesOnGraphConfig,
+				backgroundColor: 'red',
+				data: [{
+					label: "Stocks",
+					x: 4.33,
+					y: 0.742224
+				}, {
+					label: "Bonds",
+					x: 1.93,
+					y: 0.62
+				},{
+					label: "CRE (direct)",
+					x: 1.046,
+					y: 0.698
+				},{
+					label: "CRE (dir., desm.)",
+					x: 2.08,
+					y: 0.70
+				}] },
+				{
+					radius: 1,
+					backgroundColor: 'blue',
+					showLine: true,
+					borderColor: 'blue',
+					data:
+					[ {x: 0.846701, y: 0.679164, label: ''},
+					{x: 0.868134, y: 0.686171, label: ''},
+					{x: 0.929471, y: 0.693177, label: ''},
+					{x: 1.023564, y: 0.700184, label: ''},
+					{x: 1.254408, y: 0.707190, label: ''},
+					{x: 1.747477, y: 0.714197, label: ''},
+					{x: 2.347742, y: 0.721204, label: ''},
+					{x: 2.991352, y: 0.728210, label: ''},
+					{x: 3.655483, y: 0.735217, label: ''},
+					{x: 4.330705, y: 0.742224, label: ''}
+					]
+				},
+				{
+					radius: 1,
+					backgroundColor: 'orange',
+					showLine: true,
+					borderColor: 'orange',
+					data:
+					[ {x: 1.2594065, y: 0.6652327, label: ''},
+					{x: 1.2852553, y: 0.6737873, label: ''},
+					{x: 1.3598567, y: 0.6823418, label: ''},
+					{x: 1.4758361, y: 0.6908963, label: ''},
+					{x: 1.6243544, y: 0.6994509, label: ''},
+					{x: 1.7973633, y: 0.7080054, label: ''},
+					{x: 1.9895898, y: 0.7165599, label: ''},
+					{x: 2.4956695, y: 0.7251145, label: ''},
+					{x: 3.3407403, y: 0.7336690, label: ''},
+					{x: 4.3307049, y: 0.7422235, label: ''}
+					]
+				}
+			]},
+		plugins: [ChartDataLabels],
+		options: {
+			plugins: {
+				datalabels: {
+								formatter: ( val ) => {
+										return val.label
+								},
+								font: {weight: "bold", size: '15em'},
+								color: "black",
+								align: "bottom",
+								offset: 10
+						 },
+				legend: {
+						display: false,
+					}
+			},
+			scales: {
+				x: {
+					title: {
+						font: {weight: 'bold', size: '20em'},
+						text: "Risk (%, monthly)",
+						display: "true"
+					},
+					min: 0,
+					max: 5
+				},
+				y: {
+					title: {
+						font: {weight: 'bold', size: '20em'},
+						text: "Return (%, monthly)",
+						display: "true",
+					},
+					min: 0.6,
+					max: 0.78
+				}
+			}
+		}
+	} );
+	replaceCanvasImg("ef-desmoothed");
+} );
+
+
+		</script>
+	</body>
+</html>
