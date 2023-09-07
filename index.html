@@ -115,23 +115,27 @@
 				<section data-markdown >
 					<textarea data-template>
 						## Example <span class="subtitle"><br>Company A: Three potential states. Boom / normal / slump.</span>
-						<img src="imgs/scenario1.png">
+
+						<img src="imgs/scenario1.png" height="450">
+
 					</textarea>
 				</section>
 
 				<section data-markdown >
 					<textarea data-template>
 						## Example <span class="subtitle"><br>Company B: Three potential states. Boom / normal / slump.</span>
-						<img src="imgs/scenario2.png">
+
+						<img src="imgs/scenario2.png" height="450">
+
 					</textarea>
 				</section>
 
 				<section data-markdown data-state="scatter_riskreturn_AB_">
 					<textarea data-template>
 						## Risk and return <span class="subtitle"><br>... Company A and Company B, in risk/return space.</span>
-						<img src="imgs/scatter_riskreturn_AB.png" id="scatter_riskreturn_AB-img">
+						<img src="imgs/scatter_riskreturn_AB.png" height='450' id="scatter_riskreturn_AB-img">
 
-						<div class="chart-container" style="position: relative; height: 90%; width:500">
+						<div class="chart-container" style="position: relative; height: 80%; width:500">
 							<canvas id="scatter_riskreturn_AB-chart"></canvas>
 						</div>
 					</textarea>
@@ -143,7 +147,7 @@
 					<textarea data-template>
 						## Two firm portfolio <span class="subtitle"><br>50/50. Same scenarios as before.</span>
 						* In each state, the return will be the weighted average. For portfolio, E(r) = (10+8.5)/2 = 9.25%
-						<img src="imgs/scenario3.png">
+						<img src="imgs/scenario3.png" height="370">
 						* Standard deviation NOT weighted average: (10.57+2.97)/2 = 6.77 ≠ 4.5%
 					</textarea>
 				</section>
@@ -165,9 +169,9 @@
 				<section data-markdown data-state="scatter_riskreturn_ABP">
 					<textarea data-template>
 						## Risk and return<span class="subtitle"><br>Diversification improved return per unit of risk.</span>
-						<img src="imgs/scatter_riskreturn_ABP.png" id="scatter_riskreturn_ABP-img">
+						<img src="imgs/scatter_riskreturn_ABP.png" id="scatter_riskreturn_ABP-img" height=450>
 
-						<div class="chart-container" style="position: relative; height: 90%; width:500">
+						<div class="chart-container" style="position: relative; height: 80%; width:500">
 							<canvas id="scatter_riskreturn_ABP-chart"></canvas>
 						</div>
 					</textarea>
@@ -194,13 +198,14 @@
 				<section data-markdown >
 					<textarea data-template>
 						## Portfolio Variance <span class="subtitle"><br>Asset variance on diagonal, *many* covariance terms off-diagonal</span>
-						* `$ \sigma_p^2 = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $`
-						* `$ 	\sigma_p^2 = \begin{bmatrix}
-	w_1^2\sigma^2_1       &   w_2w_1cov_{2,1}       & \dots     &   w_nw_1cov_{n,1}       \\
-	w_1w_2cov_{1,2}       &   w_2^2\sigma^2_2      & \dots     &   w_2w_2cov_{n,2}       \\
-	\vdots  &  \vdots   &   \vdots  &   \vdots  \\
-	w_1w_ncov_{1,n}       &   w_2w_ncov_{2,n}       & \dots     &   w_n^2\sigma^2_n       \\  \end{bmatrix}$`
 
+						* `$ \sigma_p^2 = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $`
+
+						* `$ 	\sigma_p^2 = \begin{bmatrix}
+						w_1^2\sigma^2_1       &   w_2w_1cov_{2,1}       & \dots     &   w_nw_1cov_{n,1}       \\
+						w_1w_2cov_{1,2}       &   w_2^2\sigma^2_2      & \dots     &   w_2w_2cov_{n,2}       \\
+						\vdots  &  \vdots   &   \vdots  &   \vdots  \\
+						w_1w_ncov_{1,n}       &   w_2w_ncov_{2,n}       & \dots     &   w_n^2\sigma^2_n       \\  \end{bmatrix}$`
 
 
 					</textarea>
@@ -252,21 +257,21 @@
 				<section data-markdown >
 					<textarea data-template>
 						## Two Assets - Risk/Return <span class="subtitle"><br>Visualising the three cases `$\rho=-1, \rho=0, \rho=1$`</span>
-						<img src="imgs/three_cases.png">
+						<img src="imgs/three_cases.png" height=450>
 					</textarea>
 				</section>
 
 				<section data-markdown >
 					<textarea data-template>
 						## Many assets <span class="subtitle"><br>All possible combinations of multiple assets: risk/return</span>
-						<img src="imgs/ef1.svg">
+						<img src="imgs/ef1.svg" height=480>
 					</textarea>
 				</section>
 
 				<section data-markdown >
 					<textarea data-template>
 						## Opportunity Set  <span class="subtitle"><br>The area that encloses all possible portfolios in risk/return space</span>
-						<img src="imgs/ef2.svg">
+						<img src="imgs/ef2.svg" height=480>
 					</textarea>
 				</section>
 
@@ -274,7 +279,7 @@
 					<textarea data-template>
 						## Efficient frontier <span class="subtitle"><br>Rational investors will only select portfolios on the EF.</span>
 
-						<img src="imgs/ef3.svg">
+						<img src="imgs/ef3.svg" height=480>
 
 
 					</textarea>
@@ -285,7 +290,7 @@
 				<section data-markdown >
 					<textarea data-template>
 						## Hockey sticks! <span class="subtitle"><br>Efficient frontiers are never ever hooks!</span>
-						<img src="imgs/hockey_sticks.png">
+						<img src="imgs/hockey_sticks.png" height=480>
 					</textarea>
 				</section>
 
@@ -407,9 +412,9 @@
 					<textarea data-template>
 						## Efficient frontier <span class="subtitle"><br>Estimates based on nominal asset returns, 1987&ndash;2021</span>
 
-						<img src="imgs/ef.png" id="ef-img">
+						<img src="imgs/ef.png" id="ef-img" height=450>
 
-						<div class="chart-container" style="position: relative; height: 90%; width:500">
+						<div class="chart-container" style="position: relative; height: 80%; width:500">
 							<canvas id="ef-chart"></canvas>
 						</div>
 					</textarea>
@@ -468,7 +473,7 @@
 
 						<img src="imgs/ef-reits.png" id="ef-reits-img">
 
-						<div class="chart-container" style="position: relative; height: 90%; width:500">
+						<div class="chart-container" style="position: relative; height: 80%; width:500">
 							<canvas id="ef-reits-chart"></canvas>
 						</div>
 				</section>
@@ -543,13 +548,13 @@
 
 				<section data-markdown >
 					<textarea data-template>
-					## IPD/MSCI office<span class="subtitle"><br/>Valuation based indices are too smooth: SD 1.19%<br>First-order autocorrelation (FOAC): 0.86</span>
+					## IPD/MSCI office<span class="subtitle"><br/>Valuation based indices are too smooth</span>
 
+					* SD 1.19%. First-order autocorrelation (FOAC): 0.86<br>
 					<img src="imgs/ipd_smoothed.svg" height=300>
-
 					* Can we change the underlying problem at the asset level?
 						- Not really, there are good reasons for appraisors to incorporate new information gradually.
-					* We can (and should!) alleviate the problem at the index level.
+					* We can (and should) alleviate the problem at the index level.
 				</textarea>
 				</section>
 
@@ -655,9 +660,9 @@
 					<textarea data-template>
 						## EF, desmoothed CRE <span class="subtitle"><br>Desmoothed CRE returns shift MVP right.</span>
 
-						<img src="imgs/ef-desmoothed.png" id="ef-desmoothed-img">
+						<img src="imgs/ef-desmoothed.png" id="ef-desmoothed-img" height=450>
 
-						<div class="chart-container" style="position: relative; height: 90%; width:500">
+						<div class="chart-container" style="position: relative; height: 80%; width:500">
 							<canvas id="ef-desmoothed-chart"></canvas>
 						</div>
 					</textarea>
