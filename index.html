@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>REM1—Real Estate as an Asset Class—Session 2</title>
+		<title>REM1-Session 2-Risk & Return</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -18,16 +18,16 @@
 		<div class="reveal">
 			<div class="slides">
 
-					<section data-background-image="imgs/door.jpg" >
+					<section data-background-color="#ffffff" data-background-image="imgs/title-bg.jpg" data-background-size="auto 100%" data-background-position="right" data-background-repeat="no-repeat">
 
-					<h2 style="line-height: 0.8em;">REM1: Session 2<span class="subtitle"><br />Risk &amp; Return</span></h2>
+					<h2 style="line-height: 0.8em;">Risk &amp; Return<span class="subtitle"><br />REM1 &mdash; Session 2 of 6</span></h2>
 
 					<p style="font-size: 0.8em; margin-top: 1.4em;">Professor Thies Lindenthal
 						<br /><a href="mailto:htl24@cam.ac.uk">htl24@cam.ac.uk</a>
 						<br /><a href="https://lindenthal.eu/">https://lindenthal.eu</a>
 						<br />
 						<br />
-						September 2023</p>
+						September 2026</p>
 				</section>
 
 				<section data-markdown >
@@ -51,7 +51,7 @@
 
 				<section data-markdown >
 					<textarea data-template>
-						## Risk/Return trade-off <span class="subtitle"><br>Is Y's return large enough to compensate for higher risk?</span>
+						## Risk/Return trade-off <span class="subtitle"><br>Is Y’s return large enough to compensate for higher risk?</span>
 						<img src="imgs/riskreturn_xy.png" height=300>
 
 						* But how to chose between X & Y? Depends on investors risk preference...
@@ -72,7 +72,7 @@
 						## Comparing investments <span class="subtitle"><br>(Investor-specific) indifference curves: X preferred over Y.</span>
 						<img src="imgs/indifference_curves_averse.png" height=400>
 
-						* X is located on more "northwestern" indifference curve.
+						* X is located on more “northwestern” indifference curve.
 					</textarea>
 				</section>
 
@@ -105,10 +105,10 @@
 						## Scenario Modelling <span class="subtitle"><br>A forecasting technique, good for demonstrating principles.</span>
 						* Identify k states of the world, asset returns if those states occur, and probability of each state occurring
 
-						* Expected returns: `$\small E(X) =  \sum\limits^{i=k}_{i=1}p_iX_i$`
-						* Standard deviation: `$\small \sigma_x = \sqrt{ \sum\limits^{k}_{i=1}p_i[X_i-E(X)]^2 } $`
-						* Covariance for x and y: `$\small cov_{xy} = \sum\limits^{k}_{i=1}p_i[X_i-E(X)][Y_i-E(Y)]  $`
-						* Correlation: `$\small \rho_{xy} = cov_{xy}/(\sigma_x\sigma_y) $`
+						* Expected returns: $\small E(X) =  \sum\limits^{i=k}_{i=1}p_iX_i$
+						* Standard deviation: $\small \sigma_x = \sqrt{ \sum\limits^{k}_{i=1}p_i[X_i-E(X)]^2 } $
+						* Covariance for x and y: $\small cov_{xy} = \sum\limits^{k}_{i=1}p_i[X_i-E(X)][Y_i-E(Y)]  $
+						* Correlation: $\small \rho_{xy} = cov_{xy}/(\sigma_x\sigma_y) $
 					</textarea>
 				</section>
 
@@ -199,13 +199,13 @@
 					<textarea data-template>
 						## Portfolio Variance <span class="subtitle"><br>Asset variance on diagonal, *many* covariance terms off-diagonal</span>
 
-						* `$ \sigma_p^2 = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $`
+						* $ \sigma_p^2 = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $
 
-						* `$ 	\sigma_p^2 = \begin{bmatrix}
+						* $ 	\sigma_p^2 = \begin{bmatrix}
 						w_1^2\sigma^2_1       &   w_2w_1cov_{2,1}       & \dots     &   w_nw_1cov_{n,1}       \\
 						w_1w_2cov_{1,2}       &   w_2^2\sigma^2_2      & \dots     &   w_2w_2cov_{n,2}       \\
 						\vdots  &  \vdots   &   \vdots  &   \vdots  \\
-						w_1w_ncov_{1,n}       &   w_2w_ncov_{2,n}       & \dots     &   w_n^2\sigma^2_n       \\  \end{bmatrix}$`
+						w_1w_ncov_{1,n}       &   w_2w_ncov_{2,n}       & \dots     &   w_n^2\sigma^2_n       \\  \end{bmatrix}$
 
 
 					</textarea>
@@ -214,28 +214,28 @@
 
 				<section data-markdown >
 					<textarea data-template>
-						## Two asset portfolio <span class="subtitle"><br>From previous slide: `$\small \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $`</span>
+						## Two asset portfolio <span class="subtitle"><br>From previous slide: $\small \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $</span>
 						* Two assets, x and y
-							- `$\small \sigma_p^2 =  w_x^2\sigma^2_x + w_y^2\sigma^2_y + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $`
-							- `$\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $`
-						* Special case of perfect correlation: `$\small \rho_{xy} = +1$`
-							- `$\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 + 2w_xw_y\sigma_x\sigma_y $`
-							- `$\small \sigma_p^2 =  (w_x\sigma_x + w_y\sigma_y)^2 $`
-							- `$\small \sigma_p =  w_x\sigma_x + w_y\sigma_y$`
+							- $\small \sigma_p^2 =  w_x^2\sigma^2_x + w_y^2\sigma^2_y + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $
+							- $\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $
+						* Special case of perfect correlation: $\small \rho_{xy} = +1$
+							- $\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 + 2w_xw_y\sigma_x\sigma_y $
+							- $\small \sigma_p^2 =  (w_x\sigma_x + w_y\sigma_y)^2 $
+							- $\small \sigma_p =  w_x\sigma_x + w_y\sigma_y$
 						* **This is just a weighted average.**
 					</textarea>
 				</section>
 
 				<section data-markdown >
 					<textarea data-template>
-						## Two asset portfolio <span class="subtitle"><br>From previous slide: `$\small \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $`</span>
+						## Two asset portfolio <span class="subtitle"><br>From previous slide: $\small \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_j\rho_{ij}\sigma_i\sigma_j $</span>
 						* Two assets, x and y
-							- `$\small \sigma_p^2 =  w_x^2\sigma^2_x + w_y^2\sigma^2_y + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $`
-							- `$\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $`
-						* Special case of perfect negative correlation: `$\small \rho_{xy} = -1$`
-							- `$\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 - 2w_xw_y\sigma_x\sigma_y $`
-							- `$\small \sigma_p^2 =  (w_x\sigma_x - w_y\sigma_y)^2 $`
-							- `$\small \sigma_p =  w_x\sigma_x - w_y\sigma_y$`
+							- $\small \sigma_p^2 =  w_x^2\sigma^2_x + w_y^2\sigma^2_y + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $
+							- $\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 + 2w_xw_y\rho_{xy}\sigma_x\sigma_y $
+						* Special case of perfect negative correlation: $\small \rho_{xy} = -1$
+							- $\small \sigma_p^2 =  (w_x\sigma_x)^2 + (w_y\sigma_y)^2 - 2w_xw_y\sigma_x\sigma_y $
+							- $\small \sigma_p^2 =  (w_x\sigma_x - w_y\sigma_y)^2 $
+							- $\small \sigma_p =  w_x\sigma_x - w_y\sigma_y$
 						* **This is definitely NOT a weighted average!**
 					</textarea>
 				</section>
@@ -244,19 +244,19 @@
 					<textarea data-template>
 						## Total diversification? <span class="subtitle"><br>Are there weights for w<sub>x</sub>, w<sub>y</sub> that will lead to a riskless portfolio? </span>
 						* In case of perfect negative correlation
-							- `$\small \sigma_p =  w_x\sigma_x - w_y\sigma_y$`
+							- $\small \sigma_p =  w_x\sigma_x - w_y\sigma_y$
 						* Now set
-							- `$\small w_x/w_y = \sigma_y/\sigma_x $`
+							- $\small w_x/w_y = \sigma_y/\sigma_x $
 							- So that: $ \small w_x = w_y \sigma_y/\sigma_x $
 						* And plug back into equation at top of slide:
-							- `$\small \sigma_p = w_x\sigma_x - w_y\sigma_y = ( w_y \sigma_y/\sigma_x)\sigma_x - w_y\sigma_y =  w_y \sigma_y - w_y\sigma_y = 0$`
+							- $\small \sigma_p = w_x\sigma_x - w_y\sigma_y = ( w_y \sigma_y/\sigma_x)\sigma_x - w_y\sigma_y =  w_y \sigma_y - w_y\sigma_y = 0$
 						* With perfect negative correlation, there is a riskless portfolio &mdash; at least theoretically.
 					</textarea>
 				</section>
 
 				<section data-markdown >
 					<textarea data-template>
-						## Two Assets - Risk/Return <span class="subtitle"><br>Visualising the three cases `$\rho=-1, \rho=0, \rho=1$`</span>
+						## Two Assets - Risk/Return <span class="subtitle"><br>Visualising the three cases $\rho=-1, \rho=0, \rho=1$</span>
 						<img src="imgs/three_cases.png" height=450>
 					</textarea>
 				</section>
@@ -319,7 +319,7 @@
 
 				<section data-markdown >
 					<textarea data-template>
-						## Measure of risk <span class="subtitle"><br>MPT depends on `$\sigma$` as a simplistic measure of risk</span>
+						## Measure of risk <span class="subtitle"><br>MPT depends on $\sigma$ as a simplistic measure of risk</span>
 						* Is that a reasonable assumption for real estate?
 						<img src="imgs/HPI_UK.png" height=400>
 					</textarea>
@@ -327,7 +327,7 @@
 
 				<section data-markdown >
 					<textarea data-template>
-						## (log-)normal returns?<span class="subtitle"><br>Easy to say "yes, looks well-behaved..." &mdash; and to proceed.</span>
+						## (log-)normal returns?<span class="subtitle"><br>Easy to say “yes, looks well-behaved...” &mdash; and to proceed.</span>
 						<img src="imgs/returns_hist.png" height=330>
 
 						* From earlier lecture, we know that price dynamics exhibit tail-risk, mean reversion, momentum, ...
@@ -356,7 +356,7 @@
 
 				<section data-markdown >
 					<textarea data-template>
-						## Real data<span class="subtitle"><br>Let's use real, high-quality data </span>
+						## Real data<span class="subtitle"><br>Let’s use real, high-quality data </span>
 
 <span class="smalltable">
 
@@ -426,7 +426,7 @@
 					<textarea data-template>
 						## Asset allocation<span class="subtitle"><br>Allocations when moving along the efficient frontier.</span>
 						* Minimum Variance Portfolio on the left, max return on right.
-						* 73% direct real estate at MVP? Really? No, that's implausible.
+						* 73% direct real estate at MVP? Really? No, that’s implausible.
 
 						<img src="imgs/asset_weights.svg" height=350>
 					</textarea>
@@ -481,337 +481,25 @@
 				<section data-markdown >
 					<textarea data-template>
 						## Asset allocation<span class="subtitle"><br>Indirect real estate investments (REITs) instead of direct CRE</span>
-						* No allocations to REITs. Is that realistic? Aren't underlying assets comparable?
+						* No allocations to REITs. Is that realistic? Aren’t underlying assets comparable?
 
 						<img src="imgs/asset_weights_reits.svg" height=350>
 					</textarea>
 				</section>
 
-
-				<section data-markdown >
-					<textarea data-template>
-						## Change of frequency<span class="subtitle"><br>Same indices, different return frequency...</span>
-
-						<span class="smalltable">
-
-						| |  Ret., monthly | SD, monthly | // |  Ret., quarterly | SD, quarterly |
-						|:------------- | :----------: | :---------: |:----------: |:----------: |:----------: |
-						| Equities | 0.74% | 4.33%| // | 2.33% | 8.00% |
-						| Direct CRE | 0.70% | 1.05% | // | 2.14%|  3.01% |
-						| REITs		| 0.57%| 5.57%| // | 1.85% | 10.68% |
-						| Gilts		| 0.62%| 1.93%| // | 1.90%|  3.64% |
-
-
-						<p class="centred" style="font-size: 0.6em;"><strong>Correlations</strong></p>
-
-
-						|  | Equities | Direct CRE | Gilts| // |  | Equities | REITs  | Gilts |
-						|:------ | :------: | :------: |:----:|:----: | :----- | :------: | :----: | :---: |
-						| |  |  | | *MONTHLY* |  |  |  |  |
-						| **Equities** | 1 		 | 	 				| 		 | // | **Equities** | 1 | | |
-						| **Direct CRE** | 0.095 | 1				| 		 | // | **REITs** | 0.60 | 1| |
-						| **Gilts** | 0.09 | &minus;0.169| 1| // | **Gilts** | 0.09 | 0.14| 1|
-						| |  |  | | <br> *QUARTERLY* |  |  |  |  |
-						| **Equities** | 1 		 | 	 				| 		 | // | **Equities** | 1 | | |
-						| **Direct CRE** | 0.155 | 1				| 		 | // | **REITs** | 0.604 | 1| |
-						| **Gilts** | 0.017 | &minus;0.244| 1| // | **Gilts** | 0.017 | &minus;0.047| 1|
-						</span>
-					</textarea>
-				</section>
-
-
-				<section data-markdown >
-					<textarea data-template>
-						## Asset allocation<span class="subtitle"><br>Quarterly vs monthly returns: Shouldn't they be similar?</span>
-
-						* Quarterly and monthly returns based on the same indices.
-						* Different weights to direct CRE because of different reporting frequency?
-							- CRE Volatility does not scale in time (Sagi, 2020). Which frequency is the right one?
-
-						| Monthly returns | Quarterly returns |
-						|:------------- | :----------: |
-						| <img src="imgs/asset_weights.svg" height=280> | <img src="imgs/asset_weights_quarterly.svg" height=280> |
-					</textarea>
-				</section>
-
-
-
-				<section data-markdown >
-					<textarea data-template>
-						## Index trouble<span class="subtitle"><br>This seemingly straight-forward example went terribly wrong</span>
-						* Example combines return estimates from very different index estimation techniques
-							- MSCI/IPD indices are based on valuations: SMOOTHED!
-							- Equity and bond data are based on transactions
-					</textarea>
-				</section>
-
-
-				<section data-markdown >
-					<textarea data-template>
-					## IPD/MSCI office<span class="subtitle"><br/>Valuation based indices are too smooth</span>
-
-					* SD 1.19%. First-order autocorrelation (FOAC): 0.86<br>
-					<img src="imgs/ipd_smoothed.svg" height=300>
-					* Can we change the underlying problem at the asset level?
-						- Not really, there are good reasons for appraisors to incorporate new information gradually.
-					* We can (and should) alleviate the problem at the index level.
-				</textarea>
+				<section data-background-image="imgs/door.jpg">
+					<h2 style="line-height: 0.8em;"><span class="darkonlight">Break</span><span class="subtitle darkonlight"><br />10 minutes</span></h2>
 				</section>
 
 				<section data-markdown >
 					<textarea data-template>
-					## De-Smoothing <span class="subtitle"><br/>Band-aid for valuation based indices.</span>
-
-					* We first model the outcome of the valuations as a moving average process.
-					* The smoothed return $r_t$ is a weighted average of previous return $r_{t-1}$ and the "true" return $r\text{*}_t$.
-						- $ r_t = \alpha r_{t-1} + (1 - \alpha)r\text{*}_t $
-						- The parameter $\alpha$ describes the weight on previous return.
-					* We can re-arrange, solve for $ r\text{*}_t $
-						- `$ r\text{*}_t =  \frac{r_t - \alpha r_{t-1}} { 1 - \alpha} $`
-					* De-smoothing is based on the assumption that returns are moving averages.
-						- Do we know it is the right abstraction? Not really, but it works...
-						- Correction takes 2 minutes in a <a href="https://docs.google.com/spreadsheets/d/1ePF63vfDc36OmGbQql2ANPOJChzqtKRrZCO7Qtjwsu8/edit?usp=sharing">spreadsheet</a>.
-				</textarea>
-				</section>
-
-				<section data-markdown >
-					<textarea data-template>
-					## De-Smoothed returns <span class="subtitle"><br/>Desmoothed with alpha = 0.7. More realistic?</span>
-
-					<img src="imgs/ipd_desmoothed.svg" height=350>
-
-					* Not too bad: mean unchanged, SD 2.1% &uarr;, FOAC 0.13 &darr;
-					</textarea>
-				</section>
-
-				<section data-markdown >
-					<textarea data-template>
-					## Which alpha?<span class="subtitle"><br/>Which parameter value alpha is the right one?</span>
-
-
-					<table class="noborders">
-						<tr>
-							<td>
-								alpha = 0.1
-								<img src="imgs/ipd_des_0_1.svg" height=175>
-							</td>
-							<td>
-								alpha = 0.3
-								<img src="imgs/ipd_des_0_3.svg" height=175>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								alpha = 0.7
-								<img src="imgs/ipd_des_0_7.svg" height=175>
-							</td>
-							<td>
-								alpha = 0.9
-								<img src="imgs/ipd_des_0_9.svg" height=175>
-							</td>
-						</tr>
-					</table>
-					</textarea>
-				</section>
-
-				<section data-markdown >
-					<textarea data-template>
-					## Justifying alpha <span class="subtitle"><br/>Standard deviation and first-order autocorrelation as a function of alpha</span>
-					<img src="imgs/foac_sd.svg" height=220>
-
-					* Which range of alpha-values leads to reasonable risk and FOAC estimates?
-						- 0.6&ndash;0.7 seems reasonable in **this example** &ndash; could differ in other cases.
-						- Should FOAC be 0? Not if the economic fundamentals exhibit autocrrelation. 0.1&ndash;0.2, for price indices. Higher for total return indices.
-					* Is the additional parameter uncertainty around alpha worth it? YES!!!
-						- Smoothed returns are most likely worse than imperfectly desmoothed returns.
-					</textarea>
-				</section>
-
-
-
-
-
-
-				<section data-markdown >
-					<textarea data-template>
-						## Re-engineering valuations?<span class="subtitle"><br>Smoothing suppresses volatility, reduces correlations.</span>
-
-						* The smoothed return $r_t$ is a weighted average of previous return $r_{t-1}$ and the "true" return $r\text{*}_t$. $\alpha$ is the weight on previous return.
-							- $ r_t = \alpha r_{t-1} + (1 - \alpha)r\text{*}_t $
-						* We can re-arrange, solve for $ r\text{*}_t $
-							- `$ r\text{*}_t =  \frac{r_t - \alpha r_{t-1}} { 1 - \alpha} $`
-						* For $\alpha$ = 0.75, SD increased from 1.05 to 2.08.
-
-						<span class="smalltable">
-						<p class="centred" style="font-size: 0.6em;"><strong>Correlations</strong></p>
-
-
-						| &nbsp | Equities | Direct CRE | Gilts| // | &nbsp | Equities | Direct CRE, desm.  | Gilts |
-						| :------ | :------: | :------: |:----:|:----: | :----- | :------: | :----: | :---: |
-						| **Equities** | 1 		 | 	 				| 		 | // | **Equities** | 1 | | |
-						| **Direct CRE** | 0.095 | 1				| 		 | // | **Direct CRE,&nbsp;des.** | <mark>0.109</mark> | 1| |
-						| **Gilts** | 0.09 | &minus;0.169| 1| // | **Gilts** | 0.09 | <mark>&minus;0.191</mark>| 1|
-						</span>
-					</textarea>
-				</section>
-
-
-				<section data-markdown data-state="ef-desmoothed">
-					<textarea data-template>
-						## EF, desmoothed CRE <span class="subtitle"><br>Desmoothed CRE returns shift MVP right.</span>
-
-						<img src="imgs/ef-desmoothed.png" id="ef-desmoothed-img" height=450>
-
-						<div class="chart-container" style="position: relative; height: 80%; width:500">
-							<canvas id="ef-desmoothed-chart"></canvas>
-						</div>
-					</textarea>
-				</section>
-
-
-				<section data-markdown >
-					<textarea data-template>
-						## More realistic?<span class="subtitle"><br>Lower allocation to CRE after desmoothing. Still, way too high!</span>
-
-						* Increased SD estimate for CRE is main factor.
-						* Correlations usually play a role - but not clear in this particular example.
-
-						| MSCI/IPD smoothed returns  | desmoothed returns ($\alpha$ = 0.75) |
-						|:------------- | :----------: |
-						| <img src="imgs/asset_weights.svg" height=280> | <img src="imgs/asset_weights_desmoothed.svg" height=280> |
-					</textarea>
-				</section>
-
-
-				<section data-markdown >
-					<textarea data-template>
-						## More Frictions<span class="subtitle"><br>MPT optimisation and RE: Challenges galore.</span>
-
-						* The index tracks value of standing investments. Investor's return will be lower due to transaction costs.
-							- Reduce expected return paramenter for RE?
-						* Investors cannot hold the direct real estate index.
-							- Tracking error: real estate holdings are imperfectly benchmarked by index
-							- How will that influence expected returns, SD, correlations?
-
-					</textarea>
-				</section>
-
-				<section data-markdown >
-					<textarea data-template>
-						## Corner Solutions<span class="subtitle"><br>Small changes in parameters lead to drastic shifts in allocations.</span>
-
-						* How reliable are any historic estimates? How certain are forecasts/expectations?
-						* Big re-allocations every time-period?
-
-						<p class="centred" style="font-size: 0.6em;"><strong>This 👇 is not confidence-inducing.</strong></p>
-
-
-						| MSCI/IPD desmoothed, 1987-2021   | MSCI/IPD desmoothed, 2011-2021 |
-						|:------------- | :----------: |
-						| <img src="imgs/asset_weights_desmoothed.svg" height=250> | <img src="imgs/asset_weights_desmoothed_2011-21.svg" height=250> |
-					</textarea>
-				</section>
-
-				<section data-markdown >
-					<textarea data-template>
-						## uncertainty<span class="subtitle"><br>Break down of diversification just when you need it most?</span>
-
-						* Rolling correlation estimates: Direct RE vs FTAS (Lizieri, 2013)
-						<img src="imgs/lizieri.png" height=320>
-
-						* Diversification benefits not as big as hoped for?
-
-					</textarea>
-				</section>
-
-				<section data-markdown >
-					<textarea data-template>
-						## uncertainty<span class="subtitle"><br>Break down of diversification just when you need it most?</span>
-
-						* Rolling correlation estimates: Direct RE vs FTAS (Lizieri, 2013)
-						<img src="imgs/lizieri.png" height=320>
-
-						* Diversification benefits not as big as hoped for?
-
-					</textarea>
-				</section>
-
-
-				<section data-markdown data-background-image="imgs/lizieri2.png" data-background-size="contain">
-					<textarea data-template>
-						## <span class="subtitle"><br></span>
-					</textarea>
-				</section>
-
-
-				<section data-markdown >
-					<textarea data-template>
-						## Summing up<span class="subtitle"><br>Multi-asset portfolios can offer diversification: Markowitz!</span>
-						* MPT: Focus on returns and covariances
-						* Real estate as a diversifier: Too good to be true?
-						* MPT optimisation prone to corner solutions
-						* Index estimation methodology biases the outcome
-						* High sensitivity to time period selection
-						* Outcomes influenced by frequency of observation.
-					</textarea>
-				</section>
-
-
-				<section>
-					<h2>Know your data <span class="subtitle"><br>Don't force a square peg through a round hole.</span></h2>
-					<p class="centred"><img src="imgs/gigo.jpg" /></p>
-					<p class="source centred">Illustration: <a href="http://www.mickstevens.com">http://www.mickstevens.com</a></p>
-				</section>
-
-				<section data-markdown >
-					<textarea data-template>
-						## Applied example<span class="subtitle"><br>Getting our hands dirty, again.</span>
-						* Spreadsheet with data [here](https://docs.google.com/spreadsheets/d/10l4vq6vPhSpIPtBTdf1ckWk9md_mSwDZfmfgxM2ulEI/edit?usp=sharing)
-						* Total return data for equities, bonds and MSCI/IPD and NAREIT, monthly, UK
-						* Using the services of [portfoliooptimizer.io](https://portfoliooptimizer.io/), we can calculate efficient frontiers quickly
-							- Alternatively, you could use R. Or a very slow, semi-manual Solver plugin approach in Excel.
-						* Make a copy of that spreadsheet, on Google, so you can edit.
-						* <mark>THIS SPREADSHEET IS FOR TEACHING PURPOSES ONLY.</mark>
-							- More likely than not that <mark>there are errors somewhere.</mark>
-							- <mark>Dangerous to use in assignments.</mark> The API might not be running just when you need it...
-					</textarea>
-				</section>
-
-				<section data-markdown >
-					<textarea data-template>
-						## Things worth trying<span class="subtitle"><br></span>
-						1. Make a copy on Google Spreadsheets. <mark>IT WON'T WORK IN EXCEL!</mark>
-						2. Have a look at the efficient frontiers and the graphs of the portfolio weights. Do they match your expectations? Any thoughts?
-						3. Adjust the MPT inputs (mean, SD, correlations) until the weights look more reasonable.
-							- Think, try, think again, try again,...<br>
-					</textarea>
-				</section>
-
-
-
-<section data-visibility="hidden">
-				<section data-markdown >
-					<textarea data-template>
-						## Today's Lecture<span class="subtitle"><br>Review of classical asset pricing theories <br>&ndash; which are important for (at least) 3 majorinvestment decisions:</span>
-
-						1. Equilibrium models help investors to understand what are **reasonable expected returns on investments**
-						2. Such models can help to **identify mispriced assets**
-						3. By quantifying how the market prices risk, asset pricing models can be used to adjust	portfolio returns to reﬂect the amount of risk in portfolio: **More rigorous way to evaluate performance** of investment managers
-					</textarea>
-				</section>
-
-
-				<section data-markdown >
-					<textarea data-template>
-						## Today's Lecture<span class="subtitle"><br>Structure</span>
+						## From diversification to pricing risk<span class="subtitle"><br>Markowitz told us diversification helps. CAPM tells us why some risk gets rewarded&mdash;and some doesn’t.</span>
 
 						1. Systematic vs. unsystematic risk
 						2. Capital Asset Pricing Model (CAPM)
-						3. Multi-factor models
-						4. Real estate risk factors
+						3. Risk-adjusted performance measures
 					</textarea>
 				</section>
-
 				<section data-markdown >
 					<textarea data-template>
 						## Systematic vs. speciﬁc risk <span class="subtitle"><br> Naïve diversiﬁcation as a starting point for risk-return trade-off</span>
@@ -819,7 +507,7 @@
 						* We have seen that combining assets may diversify away risk (speciﬁc asset-level risk only)
 						* Suppose we have no additional information…
 							- ...then we might equally weight each asset in the portfolio, that is $w_i = \frac{1}{n}$
-						* Remember: `$ \sigma_p^2 = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} $`
+						* Remember: $ \sigma_p^2 = \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} $
 						* What are the implications for portfolio risk as the size of the portfolio increases?
 					</textarea>
 				</section>
@@ -828,12 +516,12 @@
 					<textarea data-template>
 						## Naïve diversiﬁcation<span class="subtitle"><br>Adding many assets to portfolio</span>
 
-						* `$ \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} $`
+						* $ \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} $
 						* Now, consider the ﬁrst term $\sum\limits_{i=1}^{n} w_i^2\sigma^2_i$
 							- Set $w_i = \frac{1}{n}$
 							- As $n$ increases, term reduces to 1/n times the average asset variance
 						* As $n$ tends to inﬁnity, the term tends to zero
-							- `$\sum\limits_{i=1}^{n} w_i^2\sigma^2_i = \sum\limits_{i=1}^{n} \frac{1}{n} \frac{1}{n}\sigma^2_i  = \frac{1}{n} \sum\limits_{i=1}^{n} \frac{1}{n}\sigma^2_i = \frac{1}{n} \frac{ \sum\limits_{i=1}^{n}\sigma^2_i}{n} = \frac{1}{n} \bar{\sigma}^2$`
+							- $\sum\limits_{i=1}^{n} w_i^2\sigma^2_i = \sum\limits_{i=1}^{n} \frac{1}{n} \frac{1}{n}\sigma^2_i  = \frac{1}{n} \sum\limits_{i=1}^{n} \frac{1}{n}\sigma^2_i = \frac{1}{n} \frac{ \sum\limits_{i=1}^{n}\sigma^2_i}{n} = \frac{1}{n} \bar{\sigma}^2$
 						* So, as portfolio size increases, so impact of individual risk on portfolio risk reduces.
 					</textarea>
 				</section>
@@ -842,11 +530,11 @@
 					<textarea data-template>
 						## Naïve diversiﬁcation<span class="subtitle"><br>Adding many assets to portfolio</span>
 
-						* `$ \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} $`
+						* $ \sigma_p^2 =  \sum\limits_{i=1}^{n} w_i^2\sigma^2_i + \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} $
 						* The second term is more complex, due to the double summation
-							- `$ \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} =  \sum\limits_{i=1}^n\sum\limits_{j<>i}^n \frac{1}{n} \frac{1}{n} cov_{ij} =  \frac{1}{n} \frac{1}{n} \sum\limits_{i=1}^n\sum\limits_{j<>i}^n cov_{ij} $`
+							- $ \sum\limits_{i=1}^n\sum\limits_{j<>i}^n w_iw_jcov_{ij} =  \sum\limits_{i=1}^n\sum\limits_{j<>i}^n \frac{1}{n} \frac{1}{n} cov_{ij} =  \frac{1}{n} \frac{1}{n} \sum\limits_{i=1}^n\sum\limits_{j<>i}^n cov_{ij} $
 							- <mark>Note that there are $n(n-1)$ terms since $i≠j$, thus $ \sum\limits_{i=1}^n\sum\limits_{j<>i}^n cov_{ij} = n(n-1) \overline{cov} $</mark>
-						* We can rewrite `$\frac{1}{n} \frac{1}{n} \sum\limits_{i=1}^n\sum\limits_{j<>i}^n cov_{ij} = \frac{1}{n} \frac{1}{n} n(n-1) \overline{cov} = \frac{n-1}{n}\overline{cov}$`
+						* We can rewrite $\frac{1}{n} \frac{1}{n} \sum\limits_{i=1}^n\sum\limits_{j<>i}^n cov_{ij} = \frac{1}{n} \frac{1}{n} n(n-1) \overline{cov} = \frac{n-1}{n}\overline{cov}$
 						* Thus, as $n$ increases, the second term tends to the average covariance, since
 $\frac{n-1}{n}$ tends to 1.
 					</textarea>
@@ -929,7 +617,7 @@ $\frac{n-1}{n}$ tends to 1.
 
 						<img src="imgs/capm3.png" height=400>
 
-						* How much risk premium can one expect: `$\frac{E(r) - R_f}{\sigma}$`
+						* How much risk premium can one expect: $\frac{E(r) - R_f}{\sigma}$
 					</textarea>
 				</section>
 
@@ -980,7 +668,7 @@ $\frac{n-1}{n}$ tends to 1.
 
 						<img src="imgs/capm8.png" height=350>
 
-						* So, we can express return as a function of risk ($\sigma_p$): `$\small E(R_p) = R_f + \frac{R_m-R_f}{\sigma_M} \sigma_p$`
+						* So, we can express return as a function of risk ($\sigma_p$): $\small E(R_p) = R_f + \frac{R_m-R_f}{\sigma_M} \sigma_p$
 					</textarea>
 				</section>
 
@@ -988,13 +676,13 @@ $\frac{n-1}{n}$ tends to 1.
 					<textarea data-template>
 						## Derive CAPM <span class="subtitle"><br>Capital Asset Pricing Model</span>
 
-						* This is one version (but not the famous one!) of the CAPM: `$\small E(R_p) = R_f + \frac{R_m-R_f}{\sigma_M} \sigma_p$`
+						* This is one version (but not the famous one!) of the CAPM: $\small E(R_p) = R_f + \frac{R_m-R_f}{\sigma_M} \sigma_p$
 
 						* Two assets in any portfolio on CML: *R<sub>f</sub>* and *M*.
 						 	- covariance of any asset with *R<sub>f</sub>* is 0.
 							- The only covariance that matters is covariance with market: cov(R<sub>i</sub>, R<sub>M</sub>)
 						* Problem with covariance as measure of risk: Scaled by variance of market.
-							- remove variance of market from risk measure: Divide by *var<sub>M</sub>* and call the ratio `$\beta = \frac{cov(R_i, R_M)}{\sigma_M^2}$`
+							- remove variance of market from risk measure: Divide by *var<sub>M</sub>* and call the ratio $\beta = \frac{cov(R_i, R_M)}{\sigma_M^2}$
 
 
 					</textarea>
@@ -1005,14 +693,14 @@ $\frac{n-1}{n}$ tends to 1.
 					<textarea data-template>
 						## Security Market Line (SML)<span class="subtitle"><br>Derived from CML, focus on systematic risk ($\beta$), not total risk ($\sigma$).</span>
 
-						* `$\beta = \frac{cov(R_i, R_M)}{\sigma_M^2}$`
+						* $\beta = \frac{cov(R_i, R_M)}{\sigma_M^2}$
 							- for $R_f$, beta is 0 (cov = 0 with risk-free asset!)
 							- for $R_M$, $cov(R_M, R_M) = \sigma_M^2$, thus beta simplifies to 1.
 						* Redraw previous plot with beta as the measure of (systematic) risk:
 
 						<img src="imgs/sml.png" height=200>
 
-						* `$\small E(R) = R_f + \frac{R_m-R_f}{1}\beta$`, which simplifies to  <mark>`$ \small E(R) = R_f + \beta (R_m-R_f)$`</mark>
+						* $\small E(R) = R_f + \frac{R_m-R_f}{1}\beta$, which simplifies to  <mark>$ \small E(R) = R_f + \beta (R_m-R_f)$</mark>
 					</textarea>
 				</section>
 
@@ -1024,7 +712,7 @@ $\frac{n-1}{n}$ tends to 1.
 						* Beta measures the sensitivity of each asset to the market (systematic) risk factor.
 						* Assets with $\beta > 1$ carry more systematic risk than market
 							- Investors will demand higher returns to compensate
-						* Asset risk has two components: `$ \small \sigma_i^2 = \beta_i^2 \sigma_m^2 + \sigma_e^2$`
+						* Asset risk has two components: $ \small \sigma_i^2 = \beta_i^2 \sigma_m^2 + \sigma_e^2$
 						* The second, residual, component is not rewarded.
 					</textarea>
 				</section>
@@ -1033,10 +721,10 @@ $\frac{n-1}{n}$ tends to 1.
 						## Example<span class="subtitle"><br>Magnitude of unrewarded risk in single asset (basic calculation of required return)</span>
 
 						* Assume that the MRP is 5%, the risk free rate is 4.5% and a ﬁrm’s beta is 1.4 &ndash; what is the expected return of that ﬁrm according to CAPM?
-							- `$E(R_i) = R_f + \beta_i MRP$`
-							- `$E(R_i) = 4.5 + 1.4 (5) = 4.5 + 7.0 = 11.5%$`
+							- $E(R_i) = R_f + \beta_i MRP$
+							- $E(R_i) = 4.5 + 1.4 (5) = 4.5 + 7.0 = 11.5%$
 						* Assume the ﬁrm’s returns have a standard deviation of 26% and the market standard deviation is 16%. How much unrewarded residual risk is there?
-							- `$\sigma_i^2 = \beta_i^2\sigma_m^2 + \sigma_e^2$`,  for unrewarded residual risk rearrange to  $\sigma_e^2 = \sigma_i^2 - \beta_i^2 \sigma_m^2$
+							- $\sigma_i^2 = \beta_i^2\sigma_m^2 + \sigma_e^2$,  for unrewarded residual risk rearrange to  $\sigma_e^2 = \sigma_i^2 - \beta_i^2 \sigma_m^2$
 							- $26^2 - 1.4^2 16^2 = 676 - 501.76 = 174.24$ <br>(174.24 / 676 = 0.258 or a quarter of the risk)
 					</textarea>
 				</section>
@@ -1058,7 +746,7 @@ $\frac{n-1}{n}$ tends to 1.
 
 				<section data-markdown >
 					<textarea data-template>
-						## Traynor ratio / Jensen's $\alpha$<span class="subtitle"><br>Excess return over systematic risk measured by beta.</span>
+						## Traynor ratio / Jensen’s $\alpha$<span class="subtitle"><br>Excess return over systematic risk measured by beta.</span>
 
 						<img src="imgs/treynor.png" height=400>
 					</textarea>
@@ -1082,7 +770,17 @@ $\frac{n-1}{n}$ tends to 1.
 					</textarea>
 				</section>
 
-</section>
+				<section data-markdown >
+					<textarea data-template>
+						## Further Reading<span class="subtitle"><br/>Book chapters &amp; papers referenced in this session</span>
+
+						* <strong>Book:</strong> Geltner, Miller, Clayton &amp; Eichholtz, <em>Commercial Real Estate Analysis and Investments</em> — Ch. 3 (Measuring Investment Performance). Portfolio theory and CAPM are standard corporate-finance material—see any introductory corporate finance text (e.g. Rau) for the full derivation.
+						* Markowitz, H. (1952). <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1952.tb01525.x">Portfolio Selection</a>. <em>The Journal of Finance</em>, 7(1), 77&ndash;91.
+						* Sagi, J. (2020/2021). <a href="https://doi.org/10.1093/rfs/hhaa122">Asset-Level Risk and Return in Real Estate Investments</a>. <em>Review of Financial Studies</em>.
+						* Eichholtz, P., Korevaar, M., Lindenthal, T. &amp; Tallec, R. (2021). <a href="https://academic.oup.com/rfs/advance-article/doi/10.1093/rfs/hhab042/6222230">The Total Return and Risk to Residential Real Estate</a>. <em>Review of Financial Studies</em>.
+					</textarea>
+				</section>
+
 
 
 			</div>
@@ -1111,7 +809,8 @@ $\frac{n-1}{n}$ tends to 1.
 					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
 					config: 'TeX-AMS_HTML-full',
 					// pass other options into `MathJax.Hub.Config()`
-					TeX: { Macros: { RR: "{\\bf R}" } }
+					TeX: { Macros: { RR: "{\\bf R}" } },
+					"HTML-CSS": { availableFonts: ["STIX-Web"], preferredFont: "STIX-Web", webFont: "STIX-Web" }
 				},
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
